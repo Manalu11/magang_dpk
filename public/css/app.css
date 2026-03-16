@@ -1,0 +1,408 @@
+/* ==========================================================================
+   Sistem Pendaftaran Magang — Dinas perpustakaan dan kearsipan
+   Custom Stylesheet
+   ========================================================================== */
+
+:root {
+    --primary: #0f3d73;
+    --secondary: #1e5aa8;
+    --bg-soft: #f2f4f7;
+    --text-muted: #6b7280;
+    --border: #e2e8f0;
+    --radius: 10px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow: 0 4px 16px rgba(15, 61, 115, 0.08);
+    --shadow-lg: 0 8px 32px rgba(15, 61, 115, 0.12);
+}
+
+/* ---- Base ---- */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #fff;
+    color: #1a202c;
+    line-height: 1.6;
+}
+
+/* ---- Typography ---- */
+.fw-600 {
+    font-weight: 600;
+}
+.fw-700 {
+    font-weight: 700;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* ---- Cards ---- */
+.card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition:
+        box-shadow 0.2s,
+        transform 0.2s;
+}
+.card:hover {
+    box-shadow: var(--shadow);
+}
+.card-header {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+}
+
+/* ---- Stat Cards ---- */
+.stat-card {
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: none;
+}
+.stat-card .stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+.stat-card .stat-value {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.stat-card .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    font-weight: 500;
+}
+.btn-primary:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* ---- Forms ---- */
+.form-control,
+.form-select {
+    border-color: var(--border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    padding: 0.625rem 0.875rem;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(30, 90, 168, 0.12);
+}
+.form-label {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+/* ---- Badges ---- */
+.badge {
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.375em 0.75em;
+    border-radius: 6px;
+}
+
+/* ---- Tables ---- */
+.table th {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--border);
+    padding: 0.75rem 1rem;
+    background: #fafbfc;
+}
+.table td {
+    padding: 0.875rem 1rem;
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+.table tbody tr:hover {
+    background: #f8faff;
+}
+.table {
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+/* ---- Hero Section ---- */
+.hero-section {
+    background:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("/images/bg-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #fff;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Supaya isi di atas */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+/* ---- Section Spacing ---- */
+.section {
+    padding: 4rem 0;
+}
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* ---- Bidang Card ---- */
+.bidang-card {
+    border-radius: var(--radius);
+    transition: all 0.25s;
+    cursor: pointer;
+    height: 100%;
+}
+.bidang-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+.bidang-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+/* ---- Status badges ---- */
+.badge-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+.badge-diterima {
+    background: #d1fae5;
+    color: #065f46;
+}
+.badge-ditolak {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ---- Auth Pages ---- */
+.auth-wrapper {
+    min-height: 100vh;
+    background: var(--bg-soft);
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+.auth-card {
+    max-width: 440px;
+    width: 100%;
+    border-radius: 16px;
+}
+.auth-brand {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    padding: 2rem;
+    border-radius: 16px 16px 0 0;
+    text-align: center;
+}
+
+/* ---- Steps ---- */
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.step-number {
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+/* ---- File Upload ---- */
+.file-upload-area {
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    background: #fafbfc;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.file-upload-area:hover {
+    border-color: var(--secondary);
+    background: #f0f7ff;
+}
+.file-upload-area.dragover {
+    border-color: var(--secondary);
+    background: #e8f1ff;
+}
+
+/* ---- Pagination ---- */
+.pagination .page-link {
+    border-radius: 8px;
+    margin: 0 2px;
+    border: 1px solid var(--border);
+    color: var(--primary);
+    font-size: 0.875rem;
+}
+.pagination .page-item.active .page-link {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+hero-section {
+    position: relative;
+    min-height: 100vh;
+    background-image: url("/images/bg-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Overlay gradasi hanya dari bawah */
+.hero-section .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* cuma nutup 60% bawah */
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.4),
+        transparent
+    );
+    z-index: 1;
+}
+.nav-link {
+    border-radius: 8px;
+    color: #6c757d;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: #eef4ff;
+    color: #0d6efd;
+}
+
+.active-menu i {
+    color: #fff !important;
+}
+/* Sidebar menu */
+.nav-link {
+    position: relative;
+    border-radius: 8px;
+    color: #6c757d;
+    padding: 10px 14px;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: #f0f4ff;
+    color: #0d6efd;
+}
+
+/* ACTIVE STYLE (modern admin look) */
+.active-menu {
+    background-color: #eaf2ff;
+    color: #0d6efd !important;
+    font-weight: 600;
+}
+
+.active-menu::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 6px;
+    bottom: 6px;
+    width: 4px;
+    background-color: #0d6efd;
+    border-radius: 4px;
+}
+
+.active-menu i {
+    color: #0d6efd !important;
+}

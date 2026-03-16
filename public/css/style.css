@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif; /* Change as needed */
+}
+
+/* Hero Section */
+.hero-section {
+  color: #ffffff; /* Default text color for hero section */
+}
+
+.hero-section .badge {
+  background-color: #e9ecef; /* Light background for badges */
+  color: #007bff; /* Primary color text */
+}
+
+.hero-section h1 span {
+  color: #7ec8f0; /* Custom color for specific span */
+}
+
+.hero-section .btn {
+  border-radius: 1rem; /* Rounded button styles */
+}
+
+/* Stats Bar */
+.stats-bar {
+  background: var(--primary);
+  padding: 1.5rem 0;
+}
+
+.stats-bar .fw-700 {
+  color: #ffffff; /* White color for stats */
+}
+
+/* Bidang Section */
+.section {
+  padding: 4rem 0; /* Section padding */
+}
+
+.section-title {
+  font-size: 2rem; /* Title size */
+}
+
+.section-subtitle {
+  color: #6c757d; /* Subtitle color */
+}
+
+/* Bidang Card */
+.bidang-card {
+  background: #ffffff; /* Card background */
+  border: 1px solid #dee2e6; /* Border for cards */
+  border-radius: 0.5rem; /* Rounded corners */
+  transition: transform 0.3s; /* Hover effect */
+}
+
+.bidang-card:hover {
+  transform: scale(1.05);
+}
+
+.bidang-icon i {
+  font-size: 4rem; /* Icon size in cards */
+}
+
+/* Step Item Styles */
+.step-item {
+  display: flex;
+  align-items: center;
+}
+
+.step-number {
+  font-size: 1.5rem; /* Step number size */
+  font-weight: bold; /* Bold step number */
+  margin-right: 1rem; /* Spacing */
+}
+
+/* Card for Requirements */
+.card {
+  background: linear-gradient(
+    135deg,
+    #f8faff,
+    #ffffff
+  ); /* Gradient background */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #007bff; /* Primary button color */
+  color: #ffffff; /* White text */
+  border-radius: 0.5rem; /* Rounded buttons */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.75rem; /* Adjust font size for mobile */
+  }
+
+  .step-item {
+    margin-bottom: 1rem; /* Spacing for steps */
+  }
+}
